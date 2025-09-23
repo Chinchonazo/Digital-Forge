@@ -8,10 +8,17 @@
 }
 .txtjustify{
     display: flex;
+    flex-direction: column;
     justify-content: left;
     align-items: flex-start;
     margin-left: 30px;
 
+}
+p{
+    flex-direction: column;
+    justify-content: left;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .body {
     font-family: Arial, sans-serif;
@@ -49,8 +56,15 @@ label {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+}
+
 input[type="text"],
 input[type="email"],
+
 textarea {
     width: 100%;
     padding: 10px;
@@ -79,3 +93,22 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+.h4{
+    background-color: rgb(13, 66, 143);
+    margin: 12px;
+    padding: 12px;
+}
+.contenedor-flex {
+    display: flex; /* Activa Flexbox y alinea los hijos en fila por defecto */
+    /* flex-direction: row; /* Este es el valor por defecto, no es necesario si quieres fila */
+    /* Si tienes problemas para que no se apilen, puedes usar: */
+    /* flex-flow: row wrap; */
+    border: 2px solid rgba(23, 202, 77, 0.485); /* Para visualizar el contenedor */
+  }
+  
+  .columna {
+    padding: 10px;
+    border: 1px solid blue; /* Para visualizar las columnas */
+  }
+  
